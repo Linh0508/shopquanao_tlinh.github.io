@@ -1,0 +1,379 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Trang chủ tiêu để */
+.header nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: aliceblue;
+    justify-content: space-between;
+    z-index: 100;
+}
+.logo{
+    font-size: 2em;
+    color: rgb(68,60,60);
+    cursor: default;
+}
+.header span{
+    color: red;
+}
+ul li{
+    position: relative;
+    display: inline-block;
+}
+ul a:hover{
+    color: red;
+}
+ul li a{
+    display:  block;
+    text-decoration: none;
+    padding: 20px 20px;
+    font-size: 1.3em;
+    color: rgb(68,60,60);
+    font-weight: 500;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+.login{
+    color: white;
+    height: 50px;
+    width: 50px;
+    padding-top: 10px;
+    margin-left: 50px;
+    text-decoration: none;
+    background-color: red;
+    border-radius: 50%;
+    border: 2px solid red;
+    transition: 0.3s;
+    font-size: 1.4em;
+    text-align: center;
+    /* cursor: default; */
+}
+.login:hover{
+    color: red;
+    background-color: transparent;
+}
+#toggle, .header label{
+    display: none;
+}
+
+/* Phần background đầu trang */
+#background-img{
+    background-image: url(anhbt/background.jpg);
+    position: relative;
+    width: calc(100%);
+    height: calc(600px);
+    margin-top: 100px;
+    background-position: center;
+    opacity: 0.8;
+}
+#background-img .fashion{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: calc(60%);
+    background-color: rgba(128, 128, 128, 0.397);
+    color: white;
+    z-index: 2;
+    text-align: center;
+    padding: 10px 0;
+}
+#background-img .fashion h1{
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+#background-img .fashion p{
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+#background-img .fashion #top{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+#background-img .fashion a{
+    text-decoration: none;
+    color: white;
+    padding: 20px 30px;
+    background-color: red;
+    border-radius: 10px;
+}
+
+/* Phần sản phẩm nổi bật */
+main{
+    margin: 0 100px;
+}
+#title-1{
+    margin-top: 40px;
+    text-align: center;
+}
+.product-remark{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    flex-direction: row;
+}
+.product-remark .product{
+    width: calc((100% - 40px)/3);
+    display: block;
+}
+.product-remark .product img{
+    width: calc(100%);
+    object-fit: cover;
+}
+.product-remark .product nav{
+    padding: 20px 10px;
+    display: block;
+    text-align: center;
+    font-size: 1.3em;
+}
+.product-remark .product:nth-child(2) img{
+    height: calc(100% - 40px);
+}
+.product-remark .product:nth-child(1), .product:nth-child(3){
+    margin-top: 30px;
+}
+
+/* Phần bộ sưu tập thời trang */
+#title-2{
+    margin-top: 100px;
+    text-align: center;
+}
+.container{
+    padding: 2rem;
+}
+.slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+.slider{
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+}
+.slider img{
+    flex: 1 0 100%;
+    object-fit: cover;
+}
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.75;
+}
+.slider-nav a:hover{
+    opacity: 1;
+}
+
+/* Phần sản phẩm mới */
+#title-3{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.product-new{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.product-new .product-n{
+    width: calc(265px);
+    text-align: center;
+    font-size: 1.2em;
+}
+.product-new .product-n h4{
+    margin-top: 10px;
+}
+.product-new .product-n img{
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Phần cam kết */
+.more{
+    margin-top: 50px;
+    width: 100%;
+    display: inline-block;
+}
+.more .more-block{
+    float: left;
+    width: calc(100%/4 - 20px);
+    margin-right: 20px;
+    display: flex;
+    border: 1px solid black;
+    padding: 10px;
+    column-gap: 15px;
+}
+.more-block .icon{
+    width: 15%;
+    position: relative;
+}
+.more-block .text{
+    width: 75%;
+}
+.more-block .text h5{
+    text-transform: uppercase;
+}
+.more-block .text p{
+    padding-top: 3px;
+    font-size: 0.6em;
+}
+.more-block .icon i{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-size: large;
+}
+
+/* Phần chân trang */
+footer{
+    margin-top: 20px;
+    padding: 50px 100px;
+    background-color: rgba(20, 19, 19, 0.801);
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
+.left{
+    width: calc(50%);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    border-right: 1px solid rgba(255, 255, 255, 0.425);
+}
+.left h2{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.left .left-1{
+    width: calc(50%);
+}
+.left .left-1 p{
+    font-size: 0.8em;
+    opacity: 0.5;
+    text-align: left;
+}
+.left .left-2{
+    width: calc(35%);
+}
+.left .left-2 p{
+    margin-bottom: 10px;
+}
+.left .left-2 a{
+    text-decoration: none;
+    color: white;
+    opacity: 0.6;
+    font-size: 0.9em;
+}
+.left .left-2 a:hover{
+    color: rgb(0, 255, 242);
+}
+.right{
+    margin-left: 40px;
+    width: calc(40%);
+}
+.right form{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 25%;
+}
+.right form input{
+    width: calc(70%);
+    background-color: white;
+    border: none;
+    color: black;
+    height: 100%;
+    padding: 5px 10px;
+}
+.right form button{
+    border: none;
+    background-color: white;
+    width: calc(20%);
+    height: 100%;
+    color: black;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .header nav{
+        padding: 20px 40px;
+    }
+    .background-img{
+        margin-top: 40px;
+    }
+    .menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        padding: 10px;
+    }
+    .window-menu{
+        margin-right: 40px;
+        display: block;
+    }
+    label{
+        font-size: 1.5em;
+    }
+    #navbar{
+        position: fixed;
+        width: 30%;
+        flex-direction: column;
+        align-items: center;
+        top: 60px;
+        left: 0;
+        transition: all .8s;
+    }
+    #navbar ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    #navbar ul li a{
+        font-size: 15px;
+    }
+    .header label{
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    #toggle:checked ~ #navbar{
+        max-height: 100%;
+        background-color: white;
+    }
+    .more-block{
+        height: 70px;
+    }
+}

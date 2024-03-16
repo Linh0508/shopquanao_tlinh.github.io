@@ -1,0 +1,374 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+  
+/* Trang chủ tiêu để */
+.header nav{
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: aliceblue;
+    justify-content: space-between;
+    z-index: 100;
+}
+.logo{
+    font-size: 2em;
+    color: rgb(68,60,60);
+    cursor: default;
+  }
+  .header span{
+    color: red;
+  }
+  ul li{
+    position: relative;
+    display: inline-block;
+  }
+  ul a:hover{
+    color: red;
+  }
+  ul li a{
+    display:  block;
+    text-decoration: none;
+    padding: 20px 20px;
+    font-size: 1.3em;
+    color: rgb(68,60,60);
+    font-weight: 500;
+    transition: 0.3s;
+    text-transform: uppercase;
+  }
+  .login{
+    color: white;
+    height: 50px;
+    width: 50px;
+    padding-top: 10px;
+    margin-left: 50px;
+    text-decoration: none;
+    background-color: red;
+    border-radius: 50%;
+    border: 2px solid red;
+    transition: 0.3s;
+    font-size: 1.4em;
+    text-align: center;
+    /* cursor: default; */
+  }
+  .login:hover{
+    color: red;
+    background-color: transparent;
+  }
+  #toggle, .header label{
+    display: none;
+  }
+
+/* Phần tin tức */
+.blog{
+    width: 100%;
+    display: grid;
+    grid-template-columns: calc(300%/4 - 40px) calc(100%/4 - 40px);
+    grid-column-gap: 40px;
+    margin-top: 50px;
+    padding: 0 50px;
+}
+#title{
+    display: block;
+    text-align: center;
+    padding: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-bottom: 1px solid rgba(97, 93, 93, 0.534);
+}
+.news{
+    width: 100%;
+}
+.news .box-news-1{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    margin-bottom: 30px;
+}
+.news .box-news-1 img{
+    width: calc(90%/2 - 20px);
+    object-fit: cover;
+}
+.news .box-news-1 div{
+    width: calc(50%);
+}
+.news .box-news-1 div a{
+    text-decoration: none;
+    color: black;
+    /* font-size: 0.9em; */
+    font-size: 1.2em;
+}
+.news .box-news-1 div a:hover{
+    color: blue;
+}
+.news .box-news-1 div p{
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+    /* font-size: 0.9em; */
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+.news .box-news-2{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    margin-bottom: 30px;
+}
+.news .box-news-2 img{
+    width: calc(90%/2 - 20px);
+    object-fit: cover;
+}
+.news .box-news-2 div{
+    width: calc(50%);
+}
+.news .box-news-2 div a{
+    text-decoration: none;
+    color: black;
+    /* font-size: 0.9em; */
+    font-size: 1.2em;
+}
+.news .box-news-2 div a:hover{
+    color: blue;
+}
+.news .box-news-2 div p{
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+    /* font-size: 0.9em; */
+    font-size: 1.2em;
+    text-align: justify;
+}
+.news #see-more{
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.news #see-more a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background-color: rgba(80, 77, 77, 0.877);
+    border-radius: 5px;
+}
+.news #see-more a:hover{
+    color: red;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.aside-menu{
+    width: 100%;
+    display: block;
+}
+.aside-menu .search{
+    display: flex;
+    flex-wrap: wrap;
+    height: 40px;
+    margin-bottom: 40px;
+}
+.aside-menu .search input{
+    width: calc(85%);
+    border-right: none;
+    padding: 5px 10px;
+    background-color: white;
+    border-color: rgba(92, 89, 89, 0.637);
+}
+.aside-menu .search button{
+    width: calc(15%);
+    background-color: white;
+    border-left: none;
+    cursor: pointer;
+    border-color: rgba(92, 89, 89, 0.637);
+}
+
+.aside-menu .select{
+    display: block;
+    padding-top: 10px;
+    border-top: 1px solid rgba(110, 110, 110, 0.719);
+}
+.aside-menu .select p{
+    width: 100%;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+}
+.aside-menu .select p .fa-solid{
+    float: right;
+    font-size: 1.1em;
+}
+.aside-menu .select p a{
+    text-decoration: none;
+    color: black;
+}
+
+.new-news{
+    width: 100%;
+    display: block;
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(110, 110, 110, 0.719);
+}
+.new-news p{
+    font-size: 1.1em;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+}
+.new-news .in-news{
+    display: flex;
+    flex-wrap: wrap;
+    height: 70px;
+    column-gap: 10px;
+    margin-bottom: 20px;
+}
+.new-news .in-news img{
+    width: calc(100%/3 - 10px);
+    object-fit: cover;
+}
+.new-news .in-news .box-new{
+    margin: auto 0;
+    font-size: 0.9em;
+    width: calc(200%/3 - 10px);
+}
+.new-news .in-news .box-new a{
+    text-decoration: none;
+    color: black;
+}
+
+  /* Phần chân trang */
+  footer{
+    padding: 50px 100px;
+    background-color: rgba(20, 19, 19, 0.801);
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+  }
+  .left{
+    width: calc(50%);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    border-right: 1px solid rgba(255, 255, 255, 0.425);
+  }
+  .left h2{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  .left .left-1{
+    width: calc(50%);
+  }
+  .left .left-1 p{
+    font-size: 0.8em;
+    opacity: 0.5;
+    text-align: left;
+  }
+  .left .left-2{
+    width: calc(35%);
+  }
+  .left .left-2 p{
+    margin-bottom: 10px;
+  }
+  .left .left-2 a{
+    text-decoration: none;
+    color: white;
+    opacity: 0.6;
+    font-size: 0.9em;
+  }
+  .left .left-2 a:hover{
+    color: rgb(0, 255, 242);
+  }
+  .right{
+    margin-left: 40px;
+    width: calc(40%);
+  }
+  .right form{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 25%;
+  }
+  .right form input{
+    width: calc(70%);
+    background-color: white;
+    border: none;
+    color: black;
+    height: 100%;
+    padding: 5px 10px;
+  }
+  .right form button{
+    border: none;
+    background-color: white;
+    width: calc(20%);
+    height: 100%;
+    color: black;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .header nav{
+        padding: 20px 40px;
+    }
+    .background-img{
+        margin-top: 40px;
+    }
+    .menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        padding: 10px;
+    }
+    .window-menu{
+        margin-right: 40px;
+        display: block;
+    }
+    label{
+        font-size: 1.5em;
+    }
+    #navbar{
+        position: fixed;
+        width: 30%;
+        flex-direction: column;
+        align-items: center;
+        top: 60px;
+        left: 0;
+        transition: all .8s;
+    }
+    #navbar ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    #navbar ul li a{
+        font-size: 15px;
+    }
+    .header label{
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    #toggle:checked ~ #navbar{
+        max-height: 100%;
+        background-color: white;
+    }
+    .aside-menu .select p .fa-solid{
+        font-size: 0.9em;
+    }
+    .aside-menu .select p{
+        font-size: 1.0em;
+    }
+    .in-news .box-new p{
+        font-size: 0.8em;
+    }
+  }
